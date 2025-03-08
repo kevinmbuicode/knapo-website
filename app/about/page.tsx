@@ -3,40 +3,42 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function AboutPage() {
   return (
-    <div className="container py-12">
-      <div className="mb-12 space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight">About Us</h1>
-        <p className="text-xl text-muted-foreground">
+    <div className="container mx-auto px-4 py-8 md:py-12">
+      <div className="mb-8 md:mb-12 space-y-2 md:space-y-4">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight">About Us</h1>
+        <p className="text-lg md:text-xl text-muted-foreground">
           Learn about the Kenya National Association of Probation Officers
         </p>
       </div>
 
-      <Tabs defaultValue="overview" className="mb-12">
-        <TabsList className="mb-8 w-full justify-start">
-          <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="vision">Vision & Values</TabsTrigger>
-          <TabsTrigger value="leadership">Leadership</TabsTrigger>
-          <TabsTrigger value="structure">Structure</TabsTrigger>
-          <TabsTrigger value="committees">Committees</TabsTrigger>
-        </TabsList>
+      <Tabs defaultValue="overview" className="mb-8 md:mb-12">
+        <div className="overflow-x-auto">
+          <TabsList className="mb-6 md:mb-8 w-max min-w-full md:w-full justify-start">
+            <TabsTrigger value="overview" className="text-sm md:text-base">Overview</TabsTrigger>
+            <TabsTrigger value="vision" className="text-sm md:text-base">Vision & Values</TabsTrigger>
+            <TabsTrigger value="leadership" className="text-sm md:text-base">Leadership</TabsTrigger>
+            <TabsTrigger value="structure" className="text-sm md:text-base">Structure</TabsTrigger>
+            <TabsTrigger value="committees" className="text-sm md:text-base">Committees</TabsTrigger>
+          </TabsList>
+        </div>
 
-        <TabsContent value="overview" className="space-y-6">
-          <div className="prose max-w-none">
-            <p className="text-lg">
+        <TabsContent value="overview" className="space-y-4 md:space-y-6">
+          <div className="prose prose-sm md:prose max-w-none">
+            <p className="text-base md:text-lg">
               The Kenya National Association of Probation Officers (KNAPO) is a professional body founded in 1976 by
               serving Probation Officers with the primary aim of addressing the issues of crime and deviance among both
               juveniles and adults. Since its establishment, KNAPO has grown significantly in membership and influence,
               making it a key organization for all practicing and retired Probation Officers in Kenya.
             </p>
-            <p className="text-lg">
+            <p className="text-base md:text-lg">
               As a nonprofit organization, KNAPO operates with a clear code of ethics that governs the conduct and
               operations of its members. The association is dedicated to promoting the professional development,
               welfare, and advocacy of Probation Officers across the country.
             </p>
-            <p className="text-lg">
+            <p className="text-base md:text-lg">
               KNAPO has 11 branches across the Republic of Kenya, with its National Secretariat located in Nairobi.
             </p>
-            <p className="text-lg">
+            <p className="text-base md:text-lg">
               The leadership of KNAPO is overseen by the National Executive Council (NEC), which is responsible for
               strategic decision-making. The National Executive Board (NEB), consisting of six key office bearers,
               guides the day-to-day activities and management of the association. Through its commitment to
@@ -45,30 +47,30 @@ export default function AboutPage() {
           </div>
         </TabsContent>
 
-        <TabsContent value="vision" className="space-y-6">
-          <div className="prose max-w-none">
-            <h2 className="text-2xl font-bold">Vision</h2>
-            <p className="text-lg">
+        <TabsContent value="vision" className="space-y-4 md:space-y-6">
+          <div className="prose prose-sm md:prose max-w-none">
+            <h2 className="text-xl md:text-2xl font-bold">Vision</h2>
+            <p className="text-base md:text-lg">
               KNAPO endeavours to enhance professionalism in the area of crime prevention as well as non-custodial
               rehabilitation of offenders.
             </p>
 
-            <h2 className="text-2xl font-bold mt-8">Core Values</h2>
-            <ol className="space-y-4">
-              <li className="text-lg">
+            <h2 className="text-xl md:text-2xl font-bold mt-6 md:mt-8">Core Values</h2>
+            <ol className="space-y-2 md:space-y-4">
+              <li className="text-base md:text-lg">
                 <strong>Committed to professionalism and welfare:</strong> Committed to promoting professionalism and
                 welfare of members for social thrift and harmonious co-existence in the community.
               </li>
-              <li className="text-lg">
+              <li className="text-base md:text-lg">
                 <strong>Embracing innovation:</strong> Desirous to embrace, adopt and enhance novelle professional and
                 welfare approaches in probation practice.
               </li>
-              <li className="text-lg">
+              <li className="text-base md:text-lg">
                 <strong>Collaboration and cooperation:</strong> Encouraging co-operation between Kenyan National
                 Association of Probation Officers with local and international organizations to enhance probation best
                 practices.
               </li>
-              <li className="text-lg">
+              <li className="text-base md:text-lg">
                 <strong>Advancement of justice and community corrections:</strong> Believing such co-operation should
                 advance professionalism and welfare of members to further the ends of justice and social reintegration.
               </li>
@@ -76,14 +78,14 @@ export default function AboutPage() {
           </div>
         </TabsContent>
 
-        <TabsContent value="leadership" className="space-y-6">
-          <div className="grid gap-8 md:grid-cols-2">
+        <TabsContent value="leadership" className="space-y-4 md:space-y-6">
+          <div className="grid gap-4 md:gap-8 sm:grid-cols-1 md:grid-cols-2">
             <Card>
-              <CardHeader>
-                <CardTitle>National Executive Board (NEB)</CardTitle>
+              <CardHeader className="p-4 md:p-6">
+                <CardTitle className="text-lg md:text-xl">National Executive Board (NEB)</CardTitle>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
+              <CardContent className="p-4 md:p-6 pt-0">
+                <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
                   <li>
                     <strong>National Chairman:</strong> Wycliffe Wathome
                   </li>
@@ -107,11 +109,11 @@ export default function AboutPage() {
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle>National Executive Council (NEC)</CardTitle>
+              <CardHeader className="p-4 md:p-6">
+                <CardTitle className="text-lg md:text-xl">National Executive Council (NEC)</CardTitle>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
+              <CardContent className="p-4 md:p-6 pt-0">
+                <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
                   <li>
                     <strong>National Chairman:</strong> Wycliffe Wathome
                   </li>
@@ -134,13 +136,13 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="md:col-span-2">
-              <CardHeader>
-                <CardTitle>Branch Chairs</CardTitle>
+            <Card className="sm:col-span-1 md:col-span-2">
+              <CardHeader className="p-4 md:p-6">
+                <CardTitle className="text-lg md:text-xl">Branch Chairs</CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-                  <ul className="space-y-2">
+              <CardContent className="p-4 md:p-6 pt-0">
+                <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                  <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
                     <li>
                       <strong>Central Branch:</strong> Peter Ndungu
                     </li>
@@ -154,7 +156,7 @@ export default function AboutPage() {
                       <strong>Upper Eastern Branch:</strong> Ezekiel Thaimuta
                     </li>
                   </ul>
-                  <ul className="space-y-2">
+                  <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
                     <li>
                       <strong>Lower Eastern Branch:</strong> Alex Ndavi
                     </li>
@@ -168,7 +170,7 @@ export default function AboutPage() {
                       <strong>Headquarters Branch:</strong> Vacant
                     </li>
                   </ul>
-                  <ul className="space-y-2">
+                  <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
                     <li>
                       <strong>South Rift Branch:</strong> Lilian Oiyie
                     </li>
@@ -180,9 +182,9 @@ export default function AboutPage() {
                     </li>
                   </ul>
                 </div>
-                <div className="mt-6">
-                  <h4 className="font-semibold">Additional Members</h4>
-                  <ul className="mt-2 space-y-2">
+                <div className="mt-4 md:mt-6">
+                  <h4 className="font-semibold text-sm md:text-base">Additional Members</h4>
+                  <ul className="mt-1 md:mt-2 space-y-1 md:space-y-2 text-sm md:text-base">
                     <li>
                       <strong>Member (1):</strong> Christine Amisi
                     </li>
@@ -199,12 +201,12 @@ export default function AboutPage() {
           </div>
         </TabsContent>
 
-        <TabsContent value="structure" className="space-y-6">
-          <div className="prose max-w-none">
-            <p className="text-lg">
+        <TabsContent value="structure" className="space-y-4 md:space-y-6">
+          <div className="prose prose-sm md:prose max-w-none">
+            <p className="text-base md:text-lg">
               KNAPO has a well-defined organizational structure with 11 branches across the Republic of Kenya:
             </p>
-            <ul className="grid gap-2 sm:grid-cols-2 md:grid-cols-3 mt-4">
+            <ul className="grid gap-1 md:gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-2 md:mt-4 text-sm md:text-base">
               <li>Central Branch</li>
               <li>Coast Branch</li>
               <li>Nairobi Branch</li>
@@ -217,7 +219,7 @@ export default function AboutPage() {
               <li>North Rift Branch</li>
               <li>North Eastern Branch</li>
             </ul>
-            <p className="text-lg mt-6">
+            <p className="text-base md:text-lg mt-4 md:mt-6">
               The National Secretariat is located in Nairobi and serves as the central administrative hub for the
               association. The organization is governed by the National Executive Council (NEC) which is responsible for
               strategic decision-making, while the National Executive Board (NEB) handles day-to-day operations and
@@ -226,13 +228,13 @@ export default function AboutPage() {
           </div>
         </TabsContent>
 
-        <TabsContent value="committees" className="space-y-6">
-          <div className="grid gap-8 md:grid-cols-3">
+        <TabsContent value="committees" className="space-y-4 md:space-y-6">
+          <div className="grid gap-4 md:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             <Card>
-              <CardHeader>
-                <CardTitle>KNAPO Ethics Committee</CardTitle>
+              <CardHeader className="p-4 md:p-6">
+                <CardTitle className="text-lg md:text-xl">KNAPO Ethics Committee</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-4 md:p-6 pt-0 text-sm md:text-base">
                 <p>
                   The KNAPO Ethics Committee is responsible for receiving and addressing complaints against members, as
                   well as recognizing and rewarding professional conduct.
@@ -241,10 +243,10 @@ export default function AboutPage() {
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle>National Training Committee</CardTitle>
+              <CardHeader className="p-4 md:p-6">
+                <CardTitle className="text-lg md:text-xl">National Training Committee</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-4 md:p-6 pt-0 text-sm md:text-base">
                 <p>
                   A National Training Committee assesses training needs submitted to the National Secretariat and
                   determines which members qualify for available training opportunities.
@@ -253,10 +255,10 @@ export default function AboutPage() {
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle>Investments Committee</CardTitle>
+              <CardHeader className="p-4 md:p-6">
+                <CardTitle className="text-lg md:text-xl">Investments Committee</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-4 md:p-6 pt-0 text-sm md:text-base">
                 <p>
                   This committee manages assets and investments held in the name of KNAPO. All members of the committee
                   must be fully paid-up members of KNAPO.
@@ -269,4 +271,3 @@ export default function AboutPage() {
     </div>
   )
 }
-
