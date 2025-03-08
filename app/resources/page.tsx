@@ -24,8 +24,8 @@ export default function ResourcesPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Card>
               <CardHeader>
-                <CardTitle>Membership Forms</CardTitle>
-                <CardDescription>Application forms for different membership types</CardDescription>
+                <CardTitle>Corprate Membership Forms</CardTitle>
+                <CardDescription>Application forms for coprate membership types</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex h-24 items-center justify-center">
@@ -34,10 +34,50 @@ export default function ResourcesPage() {
               </CardContent>
               <CardFooter>
                 <Button className="w-full" asChild>
-                  <Link href="#">
+                  <a href="/assets/documents/Corporate Membership Application Form.pdf" download>
                     <Download className="mr-2 h-4 w-4" />
                     Download
-                  </Link>
+                  </a>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Individual Membership Forms</CardTitle>
+                <CardDescription>Application forms for Individual membership types</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex h-24 items-center justify-center">
+                  <FileText className="h-16 w-16 text-primary" />
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full" asChild>
+                  <a href="/assets/documents/Individual Membership Application Form.pdf" download>
+                    <Download className="mr-2 h-4 w-4" />
+                    Download
+                  </a>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Student Membership Form</CardTitle>
+                <CardDescription>Application forms for Students membership types</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex h-24 items-center justify-center">
+                  <FileText className="h-16 w-16 text-primary" />
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full" asChild>
+                  <a href="/assets/documents/Student Membership Application Form.pdf" download>
+                    <Download className="mr-2 h-4 w-4" />
+                    Download
+                  </a>
                 </Button>
               </CardFooter>
             </Card>
@@ -54,50 +94,10 @@ export default function ResourcesPage() {
               </CardContent>
               <CardFooter>
                 <Button className="w-full" asChild>
-                  <Link href="#">
+                  <a href="/assets/documents/KNAPO Brochure.pdf" download>
                     <Download className="mr-2 h-4 w-4" />
                     Download
-                  </Link>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Research Papers</CardTitle>
-                <CardDescription>Academic papers on probation practice</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex h-24 items-center justify-center">
-                  <FileText className="h-16 w-16 text-primary" />
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full" asChild>
-                  <Link href="#">
-                    <Download className="mr-2 h-4 w-4" />
-                    Download
-                  </Link>
-                </Button>
-              </CardFooter>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Newsletters</CardTitle>
-                <CardDescription>KNAPO newsletters and updates</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex h-24 items-center justify-center">
-                  <FileText className="h-16 w-16 text-primary" />
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full" asChild>
-                  <Link href="#">
-                    <Download className="mr-2 h-4 w-4" />
-                    Download
-                  </Link>
+                  </a>
                 </Button>
               </CardFooter>
             </Card>
@@ -114,10 +114,10 @@ export default function ResourcesPage() {
               </CardContent>
               <CardFooter>
                 <Button className="w-full" asChild>
-                  <Link href="#">
+                  <a href="/assets/reports.pdf" download>
                     <Download className="mr-2 h-4 w-4" />
                     Download
-                  </Link>
+                  </a>
                 </Button>
               </CardFooter>
             </Card>
@@ -151,4 +151,3 @@ export default function ResourcesPage() {
     </div>
   )
 }
-
