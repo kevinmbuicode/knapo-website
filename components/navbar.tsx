@@ -24,6 +24,8 @@ const navItems = [
   { name: "Resources", href: "/resources" },
   { name: "Advocacy", href: "/advocacy" },
   { name: "Contact", href: "/contact" },
+  // Member Dashboard is now always visible regardless of sign-in status
+  { name: "Members Dashboard", href: "/member-dashboard" }
 ]
 
 // Inline ThemeToggle component since the import path might be different
@@ -63,13 +65,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const { isSignedIn } = useUser()
 
-  // Full nav items including conditional members dashboard
-  const fullNavItems = [
-    ...navItems,
-    // Conditionally add Members Dashboard
-    ...(isSignedIn ? [{ name: "Members Dashboard", href: "/dashboard" }] : [])
-  ]
-
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="container flex h-16 items-center justify-between">
@@ -87,7 +82,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex md:gap-5 lg:gap-8">
-          {fullNavItems.map((item) => (
+          {navItems.map((item) => (
             <Link key={item.name} href={item.href} className="text-sm font-medium transition-colors hover:text-primary">
               {item.name}
             </Link>
@@ -139,7 +134,7 @@ export default function Navbar() {
       <div className={cn("fixed inset-0 top-16 z-50 bg-background md:hidden", isOpen ? "block" : "hidden")}>
         <div className="container flex flex-col gap-6 py-6">
           <nav className="flex flex-col gap-4">
-            {fullNavItems.map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
