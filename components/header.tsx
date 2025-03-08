@@ -15,7 +15,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
-import { ModeToggle } from "@/components/mode-toggle"
+import { ThemeToggle } from "@/components/ui/mode-toggle"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -115,7 +115,8 @@ export default function Header() {
         </NavigationMenu>
 
         <div className="flex items-center gap-2">
-          <ModeToggle />
+          {/* ThemeToggle visible in both desktop and mobile views */}
+          <ThemeToggle />
           <Link href="/member/login" className="hidden md:inline-flex">
             <Button variant="outline">Member Login</Button>
           </Link>
@@ -166,6 +167,17 @@ export default function Header() {
             <Link href="/contact" className="border-t py-2 font-medium" onClick={() => setIsMenuOpen(false)}>
               Contact
             </Link>
+            
+            {/* Theme toggle in mobile menu - more explicitly styled */}
+            <div className="border-t py-3">
+              <div className="flex items-center justify-between">
+                <span className="font-medium">Toggle Theme</span>
+                <div className="flex justify-center items-center p-1 border rounded-md bg-accent/20">
+                  <ThemeToggle />
+                </div>
+              </div>
+            </div>
+            
             <div className="border-t pt-4">
               <Link href="/member/login" onClick={() => setIsMenuOpen(false)}>
                 <Button className="w-full">Member Login</Button>
@@ -183,4 +195,3 @@ const navigationMenuTriggerStyle = () => {
     "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
   )
 }
-
