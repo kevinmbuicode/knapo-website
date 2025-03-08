@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X, Moon, Sun } from "lucide-react"
+import { Menu, X, Moon, Sun, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useTheme } from "next-themes"
@@ -15,6 +15,12 @@ import {
   SignedIn, 
   SignedOut 
 } from "@clerk/nextjs"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu"
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -95,30 +101,55 @@ export default function Navbar() {
           
           <div className="hidden md:block">
             <SignedIn>
-              {/* User is signed in */}
-              <UserButton 
-                afterSignOutUrl="/"
-                appearance={{
-                  elements: {
-                    userButtonAvatarBox: "w-8 h-8"
-                  }
-                }}
-              />
+              {/* User is signed in - On hover shows sign out */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <div>
+                    <UserButton 
+                      afterSignOutUrl="/"
+                      appearance={{
+                        elements: {
+                          userButtonAvatarBox: "w-8 h-8"
+                        }
+                      }}
+                    />
+                  </div>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem asChild>
+                    <UserButton 
+                      afterSignOutUrl="/"
+                      showName={true}
+                    />
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </SignedIn>
             <SignedOut>
-              {/* User is signed out */}
-              <div className="flex items-center gap-2">
-                <SignInButton mode="modal">
-                  <Button variant="outline" size="sm">
-                    Sign In
+              {/* User is signed out - Shows user icon that expands to Sign In/Sign Up on hover */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="rounded-full">
+                    <User className="h-5 w-5" />
                   </Button>
-                </SignInButton>
-                <SignUpButton mode="modal">
-                  <Button size="sm">
-                    Sign Up
-                  </Button>
-                </SignUpButton>
-              </div>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem asChild>
+                    <SignInButton mode="modal">
+                      <Button variant="ghost" className="w-full justify-start">
+                        Sign In
+                      </Button>
+                    </SignInButton>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <SignUpButton mode="modal">
+                      <Button variant="ghost" className="w-full justify-start">
+                        Sign Up
+                      </Button>
+                    </SignUpButton>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </SignedOut>
           </div>
 
@@ -146,12 +177,6 @@ export default function Navbar() {
             ))}
           </nav>
           <div className="flex flex-col gap-4">
-            {/* Theme toggle with label in mobile menu */}
-            <div className="flex items-center justify-between border p-3 rounded-md">
-              <span className="text-lg font-medium">Toggle Theme</span>
-              <ThemeToggle />
-            </div>
-            
             <SignedIn>
               <div className="flex items-center justify-between border p-3 rounded-md">
                 <span className="text-lg font-medium">Your Account</span>
@@ -166,16 +191,32 @@ export default function Navbar() {
               </div>
             </SignedIn>
             <SignedOut>
-              <SignInButton mode="modal">
-                <Button className="w-full" variant="outline">
-                  Sign In
-                </Button>
-              </SignInButton>
-              <SignUpButton mode="modal">
-                <Button className="w-full">
-                  Sign Up
-                </Button>
-              </SignUpButton>
+              <div className="flex items-center justify-between border p-3 rounded-md">
+                <span className="text-lg font-medium">Your Account</span>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="icon" className="rounded-full">
+                      <User className="h-5 w-5" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuItem asChild>
+                      <SignInButton mode="modal">
+                        <Button variant="ghost" className="w-full justify-start">
+                          Sign In
+                        </Button>
+                      </SignInButton>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <SignUpButton mode="modal">
+                        <Button variant="ghost" className="w-full justify-start">
+                          Sign Up
+                        </Button>
+                      </SignUpButton>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
             </SignedOut>
           </div>
         </div>
