@@ -4,8 +4,8 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X, Moon, Sun, User } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { Button } from "./ui/button"
+import { cn } from "../lib/utils"
 import { useTheme } from "next-themes"
 import { 
   UserButton, 
@@ -20,7 +20,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu"
+} from "./ui/dropdown-menu"
 
 const navItems = [
   { name: "Home", href: "/" },

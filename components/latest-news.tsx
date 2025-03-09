@@ -2,8 +2,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { CalendarDays } from "lucide-react"
 
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card"
+import { Badge } from "./ui/badge"
 
 export default function LatestNews() {
   const newsItems = [
