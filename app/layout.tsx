@@ -1,8 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
-import "./globals.css"
+import "../styles/globals.css"
 import Navbar from "../components/navbar"
-import Footer from "..//components/footer"
+import Footer from "../components/footer"
 import { ThemeProvider } from "../components/theme-provider"
 import { ClerkProvider } from '@clerk/nextjs';
 
