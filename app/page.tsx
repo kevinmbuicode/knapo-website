@@ -35,7 +35,7 @@ export default function Home() {
             <p className="mb-8 text-lg text-muted-foreground">
               Our mission is to enhance professionalism in the area of crime prevention as well as non-custodial
               rehabilitation of offenders. KNAPO aims to maintain professional standards in probation practice through a
-              code of conduct, promote the welfare of its members, and act as an advisory body in policy development. It
+              code of conduct, promote the welfare of its members, and act as an advisory body in policy development.<br/> It
               fosters cooperation among members, collaborates with global organizations, and provides a platform for
               research and discussions on probation practices. The association plans to mobilize resources to further
               its objectives.

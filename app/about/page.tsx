@@ -27,17 +27,20 @@ export default function AboutPage() {
             <p className="text-base md:text-lg">
               The Kenya National Association of Probation Officers (KNAPO) is a professional body founded in 1976 by
               serving Probation Officers with the primary aim of addressing the issues of crime and deviance among both
-              juveniles and adults. Since its establishment, KNAPO has grown significantly in membership and influence,
+              juveniles and adults.<br/> Since its establishment, KNAPO has grown significantly in membership and influence,
               making it a key organization for all practicing and retired Probation Officers in Kenya.
             </p>
+            <br/>
             <p className="text-base md:text-lg">
               As a nonprofit organization, KNAPO operates with a clear code of ethics that governs the conduct and
               operations of its members. The association is dedicated to promoting the professional development,
               welfare, and advocacy of Probation Officers across the country.
             </p>
+            <br/>
             <p className="text-base md:text-lg">
               KNAPO has 11 branches across the Republic of Kenya, with its National Secretariat located in Nairobi.
             </p>
+            <br/>
             <p className="text-base md:text-lg">
               The leadership of KNAPO is overseen by the National Executive Council (NEC), which is responsible for
               strategic decision-making. The National Executive Board (NEB), consisting of six key office bearers,

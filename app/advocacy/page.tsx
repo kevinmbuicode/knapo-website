@@ -28,6 +28,7 @@ export default function AdvocacyPage() {
               addressing issues related to working conditions, career development, and benefits, providing a supportive
               platform for members to voice concerns and seek resolutions.
             </p>
+            <br/>
             <p className="text-base md:text-lg">
               Additionally, KNAPO plays a crucial role in contributing to the development of national policies,
               particularly the National Correctional Policy. The association will provide expert input, offering
