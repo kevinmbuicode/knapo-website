@@ -82,122 +82,116 @@ export default function AboutPage() {
         </TabsContent>
 
         <TabsContent value="leadership" className="space-y-4 md:space-y-6">
-          <div className="grid gap-4 md:gap-8 sm:grid-cols-1 md:grid-cols-2">
+          <div className="grid gap-6 md:gap-8">
             <Card>
-              <CardHeader className="p-4 md:p-6">
-                <CardTitle className="text-lg md:text-xl">National Executive Board (NEB)</CardTitle>
+              <CardHeader className="p-4 md:p-6 bg-primary/5 border-b">
+                <CardTitle className="text-xl md:text-2xl">National Executive Council (NEC)</CardTitle>
               </CardHeader>
-              <CardContent className="p-4 md:p-6 pt-0">
-                <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
-                  <li>
-                    <strong>National Chairman:</strong> Wycliffe Wathome
-                  </li>
-                  <li>
-                    <strong>Vice National Chairman:</strong> Veronica Irungu
-                  </li>
-                  <li>
-                    <strong>National Secretary:</strong> Daniel Ng'etich
-                  </li>
-                  <li>
-                    <strong>Vice National Secretary:</strong> Stephen Muthoka
-                  </li>
-                  <li>
-                    <strong>National Treasurer:</strong> Edward Ochieng
-                  </li>
-                  <li>
-                    <strong>Vice National Treasurer:</strong> John Soxwel Mokoro
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader className="p-4 md:p-6">
-                <CardTitle className="text-lg md:text-xl">National Executive Council (NEC)</CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 md:p-6 pt-0">
-                <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
-                  <li>
-                    <strong>National Chairman:</strong> Wycliffe Wathome
-                  </li>
-                  <li>
-                    <strong>Vice National Chairman:</strong> Veronica Irungu
-                  </li>
-                  <li>
-                    <strong>National Secretary:</strong> Daniel Ng'etich
-                  </li>
-                  <li>
-                    <strong>Vice National Secretary:</strong> Stephen Muthoka
-                  </li>
-                  <li>
-                    <strong>National Treasurer:</strong> Edward Ochieng
-                  </li>
-                  <li>
-                    <strong>Vice National Treasurer:</strong> John Soxwel Mokoro
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="sm:col-span-1 md:col-span-2">
-              <CardHeader className="p-4 md:p-6">
-                <CardTitle className="text-lg md:text-xl">Branch Chairs</CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 md:p-6 pt-0">
-                <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-                  <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
-                    <li>
-                      <strong>Central Branch:</strong> Peter Ndungu
-                    </li>
-                    <li>
-                      <strong>Coast Branch:</strong> Dennis Nyorani
-                    </li>
-                    <li>
-                      <strong>Nairobi Branch:</strong> Vacant
-                    </li>
-                    <li>
-                      <strong>Upper Eastern Branch:</strong> Ezekiel Thaimuta
-                    </li>
-                  </ul>
-                  <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
-                    <li>
-                      <strong>Lower Eastern Branch:</strong> Alex Ndavi
-                    </li>
-                    <li>
-                      <strong>Western Branch:</strong> Godwin Munialo
-                    </li>
-                    <li>
-                      <strong>Nyanza Branch:</strong> Calvin Ouko
-                    </li>
-                    <li>
-                      <strong>Headquarters Branch:</strong> Vacant
-                    </li>
-                  </ul>
-                  <ul className="space-y-1 md:space-y-2 text-sm md:text-base">
-                    <li>
-                      <strong>South Rift Branch:</strong> Lilian Oiyie
-                    </li>
-                    <li>
-                      <strong>North Rift Branch:</strong> Vacant
-                    </li>
-                    <li>
-                      <strong>North Eastern Branch:</strong> Abdulrashid Nurrow
-                    </li>
-                  </ul>
+              <CardContent className="p-0">
+                <div className="p-4 md:p-6 border-b">
+                  <h3 className="font-semibold text-lg md:text-xl mb-3">Executive Board Members</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="p-3 bg-muted/40 rounded-lg">
+                      <div className="font-medium">National Chairman</div>
+                      <div className="text-primary">Wycliffe Wathome</div>
+                    </div>
+                    <div className="p-3 bg-muted/40 rounded-lg">
+                      <div className="font-medium">Vice National Chairman</div>
+                      <div className="text-primary">Veronica Irungu</div>
+                    </div>
+                    <div className="p-3 bg-muted/40 rounded-lg">
+                      <div className="font-medium">National Secretary</div>
+                      <div className="text-primary">Daniel Ng'etich</div>
+                    </div>
+                    <div className="p-3 bg-muted/40 rounded-lg">
+                      <div className="font-medium">Vice National Secretary</div>
+                      <div className="text-primary">Stephen Muthoka</div>
+                    </div>
+                    <div className="p-3 bg-muted/40 rounded-lg">
+                      <div className="font-medium">National Treasurer</div>
+                      <div className="text-primary">Edward Ochieng</div>
+                    </div>
+                    <div className="p-3 bg-muted/40 rounded-lg">
+                      <div className="font-medium">Vice National Treasurer</div>
+                      <div className="text-primary">John Soxwel Mokoro</div>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-4 md:mt-6">
-                  <h4 className="font-semibold text-sm md:text-base">Additional Members</h4>
-                  <ul className="mt-1 md:mt-2 space-y-1 md:space-y-2 text-sm md:text-base">
-                    <li>
-                      <strong>Member (1):</strong> Christine Amisi
-                    </li>
-                    <li>
-                      <strong>Member (2):</strong> Mutisya Kioko
-                    </li>
-                    <li>
-                      <strong>Member (3):</strong> Beatrice Kagwiria
-                    </li>
-                  </ul>
+                
+                <div className="p-4 md:p-6">
+                  <h3 className="font-semibold text-lg md:text-xl mb-3">Branch Leadership</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                      <h4 className="font-medium text-base mb-2 pb-1 border-b">Eastern Region</h4>
+                      <ul className="space-y-2">
+                        <li>
+                          <div className="text-sm text-muted-foreground">Upper Eastern</div>
+                          <div>Ezekiel Thaimuta</div>
+                        </li>
+                        <li>
+                          <div className="text-sm text-muted-foreground">Lower Eastern</div>
+                          <div>Alex Ndavi</div>
+                        </li>
+                        <li>
+                          <div className="text-sm text-muted-foreground">North Eastern</div>
+                          <div>Abdulrashid Nurrow</div>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-medium text-base mb-2 pb-1 border-b">Western Region</h4>
+                      <ul className="space-y-2">
+                        <li>
+                          <div className="text-sm text-muted-foreground">Western Branch</div>
+                          <div>Godwin Munialo</div>
+                        </li>
+                        <li>
+                          <div className="text-sm text-muted-foreground">Nyanza Branch</div>
+                          <div>Calvin Ouko</div>
+                        </li>
+                        <li>
+                          <div className="text-sm text-muted-foreground">North Rift Branch</div>
+                          <div className="italic text-muted-foreground">Vacant</div>
+                        </li>
+                        <li>
+                          <div className="text-sm text-muted-foreground">South Rift Branch</div>
+                          <div>Lilian Oiyie</div>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-medium text-base mb-2 pb-1 border-b">Central Region</h4>
+                      <ul className="space-y-2">
+                        <li>
+                          <div className="text-sm text-muted-foreground">Central Branch</div>
+                          <div>Peter Ndungu</div>
+                        </li>
+                        <li>
+                          <div className="text-sm text-muted-foreground">Coast Branch</div>
+                          <div>Dennis Nyorani</div>
+                        </li>
+                        <li>
+                          <div className="text-sm text-muted-foreground">Nairobi Branch</div>
+                          <div className="italic text-muted-foreground">Vacant</div>
+                        </li>
+                        <li>
+                          <div className="text-sm text-muted-foreground">Headquarters Branch</div>
+                          <div className="italic text-muted-foreground">Vacant</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6">
+                    <h4 className="font-medium text-base mb-2 pb-1 border-b">Additional Members</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                      <div className="p-2 bg-muted/30 rounded">Christine Amisi</div>
+                      <div className="p-2 bg-muted/30 rounded">Mutisya Kioko</div>
+                      <div className="p-2 bg-muted/30 rounded">Beatrice Kagwiria</div>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -273,4 +267,4 @@ export default function AboutPage() {
       </Tabs>
     </div>
   )
-  }
+}
