@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   manifest: '/assets/favicons/site.webmanifest',
   applicationName: 'Kenya National Association of Probation Officers',
-  themeColor: '#000000',
+  themeColor: '#008F39', // Updated to match your primary green color
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
@@ -39,8 +39,8 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <head>
-          <meta name="msapplication-TileColor" content="#da532c" />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="msapplication-TileColor" content="#008F39" /> {/* Updated to match your primary green color */}
+          <meta name="theme-color" content="#008F39" /> {/* Updated to match your primary green color */}
         </head>
         <body suppressHydrationWarning>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
