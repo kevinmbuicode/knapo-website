@@ -1,45 +1,41 @@
-// import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { authMiddleware } from "@clerk/nextjs";
 
-// //chatbot is protected
-// const isProtectedRoute = createRouteMatcher(["/member-dashboard(.*)"]);
+// List of paths that should be publicly accessible without authentication
+const publicRoutes = [
+  "/",
+  "/about",
+  "/membership",
+  "/events",
+  "/resources",
+  "/advocacy",
+  "/contact",
+  "/sign-in",
+  "/sign-up"
+];
 
-// export default clerkMiddleware(async (auth, req) => {
-//   const { userId, redirectToSignIn } = await auth();
-
-//   if (!userId && isProtectedRoute(req)) {
-//     //redirect to sign in page
-//     return redirectToSignIn();
-//   }
-// });
-
-// export const config = {
-//   matcher: [
-//     // Skip Next.js internals and all static files, unless found in search params
-//     "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
-//     // Always run for API routes
-//     "/(api|trpc)(.*)",
-//   ],
-// };
-
-import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
-
-// Protected route matcher for member-dashboard paths
-const isProtectedRoute = createRouteMatcher(["/member-dashboard(.*)"]);
-
-export default clerkMiddleware(async (auth, req) => {
-  const { userId, redirectToSignIn } = await auth();
-  
-  if (!userId && isProtectedRoute(req)) {
-    // Redirect to sign in page if user tries to access member dashboard while not logged in
-    return redirectToSignIn();
+// Export the middleware with defined public routes
+export default authMiddleware({
+  publicRoutes: publicRoutes,
+  // Optional: define a function to handle what happens when an unauthenticated user
+  // tries to access a protected route
+  afterAuth(auth, req, evt) {
+    // If the user is not authenticated and trying to access a non-public route
+    if (!auth.userId && !publicRoutes.some(route => 
+      req.nextUrl.pathname === route || 
+      req.nextUrl.pathname.startsWith(`${route}/`)
+    )) {
+      // Redirect to the sign-in page with a return_back_to parameter
+      const signInUrl = new URL('/sign-in', req.url);
+      signInUrl.searchParams.set('redirect_url', req.url);
+      return evt.redirect(signInUrl);
+    }
   }
 });
 
+// Export the matcher configuration
 export const config = {
   matcher: [
-    // Skip Next.js internals and all static files, unless found in search params
-    "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
-    // Always run for API routes
-    "/(api|trpc)(.*)",
+    // Match all paths except Next.js internals and static files
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:jpg|jpeg|gif|png|svg|webp|css|js)$).*)"
   ],
 };
