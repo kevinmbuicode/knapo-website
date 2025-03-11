@@ -73,32 +73,6 @@ function ThemeToggle() {
   )
 }
 
-// Protected Link component that redirects to sign-in when not authenticated
-function ProtectedLink({ href, children, className, onClick }) {
-  const { isSignedIn } = useUser()
-  const router = useRouter()
-
-  const handleClick = (e) => {
-    if (!isSignedIn) {
-      e.preventDefault()
-      router.push("/sign-in")
-      if (onClick) onClick()
-    } else if (onClick) {
-      onClick()
-    }
-  }
-
-  return (
-    <Link 
-      href={href} 
-      className={className} 
-      onClick={handleClick}
-    >
-      {children}
-    </Link>
-  )
-}
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const { isSignedIn } = useUser()
@@ -131,29 +105,18 @@ export default function Navbar() {
             </Link>
           ))}
           
-          {/* Member-only navigation */}
-          {memberNavItems.map((item) => (
-            <SignedIn key={`signed-in-${item.name}`}>
+          {/* Member-only navigation - ONLY visible if signed in */}
+          <SignedIn>
+            {memberNavItems.map((item) => (
               <Link 
+                key={item.name} 
                 href={item.href} 
                 className="text-sm font-medium transition-colors hover:text-primary"
               >
                 {item.name}
               </Link>
-            </SignedIn>
-          ))}
-          
-          {/* Show Member Dashboard with redirection for signed-out users */}
-          {memberNavItems.map((item) => (
-            <SignedOut key={`signed-out-${item.name}`}>
-              <ProtectedLink 
-                href={item.href} 
-                className="text-sm font-medium transition-colors hover:text-primary"
-              >
-                {item.name}
-              </ProtectedLink>
-            </SignedOut>
-          ))}
+            ))}
+          </SignedIn>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -238,7 +201,7 @@ export default function Navbar() {
               </Link>
             ))}
             
-            {/* Member-only navigation for signed-in users */}
+            {/* Member-only navigation for signed-in users - ONLY visible if signed in */}
             <SignedIn>
               {memberNavItems.map((item) => (
                 <Link
@@ -251,20 +214,6 @@ export default function Navbar() {
                 </Link>
               ))}
             </SignedIn>
-            
-            {/* Protected navigation for signed-out users */}
-            <SignedOut>
-              {memberNavItems.map((item) => (
-                <ProtectedLink
-                  key={item.name}
-                  href={item.href}
-                  className="text-lg font-medium transition-colors hover:text-primary"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </ProtectedLink>
-              ))}
-            </SignedOut>
           </nav>
           <div className="flex flex-col gap-4">
             <SignedIn>
