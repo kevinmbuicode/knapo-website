@@ -1,8 +1,6 @@
 import { authMiddleware } from "@clerk/nextjs";
 
-// Export the middleware with the simplest configuration
 export default authMiddleware({
-  // Public routes that don't require authentication
   publicRoutes: [
     "/",
     "/about",
@@ -11,12 +9,15 @@ export default authMiddleware({
     "/resources",
     "/advocacy",
     "/contact",
+    "/api/(.*)",
     "/sign-in",
     "/sign-up"
+  ],
+  ignoredRoutes: [
+    "/(api|trpc)/(.*)"
   ]
 });
 
-// Use Clerk's recommended default matcher pattern
 export const config = {
   matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
 };
