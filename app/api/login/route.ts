@@ -44,6 +44,7 @@ export async function POST(req: Request) {
       );
     }
 
+    
     return NextResponse.json(
       { user: data.user, session: data.session },
       { status: 200 }

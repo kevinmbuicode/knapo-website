@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { ThemeProvider } from "../components/theme-provider";
-import { AuthProvider } from "@/lib/authProvider";
+// import { AuthProvider } from "@/lib/authProvider";
 
 export const metadata: Metadata = {
   title: "Kenya National Association of Probation Officers (KNAPO)",
@@ -105,7 +105,6 @@ export default function RootLayout({
         <meta name="geo.placename" content="Nairobi" />
       </head>
       <body suppressHydrationWarning>
-        <AuthProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="flex min-h-screen flex-col">
               <Navbar />
@@ -113,7 +112,6 @@ export default function RootLayout({
               <Footer />
             </div>
           </ThemeProvider>
-        </AuthProvider>
       </body>
     </html>
   );
