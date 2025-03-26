@@ -59,17 +59,13 @@ function ThemeToggle() {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-  const { session, loading } = useAuth();
+  const { session } = useAuth();
   const user = session?.user;
 
   const handleSignOut = async () => {
     await supabase.auth.signOut();
     router.refresh(); // Refresh the page to reflect the logout
   };
-
-  if (loading) {
-    return <div>Loading...</div>; // Show a loading indicator while session is being fetched
-  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
