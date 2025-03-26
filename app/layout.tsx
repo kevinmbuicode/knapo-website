@@ -4,7 +4,6 @@ import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { ThemeProvider } from "../components/theme-provider";
-// import { AuthProvider } from "@/lib/authProvider";
 
 export const metadata: Metadata = {
   title: "Kenya National Association of Probation Officers (KNAPO)",
@@ -77,6 +76,16 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: "KNAPO",
   },
+  other: {
+    "msapplication-TileColor": "#008F39",
+    organization: "Kenya National Association of Probation Officers",
+    founded: "1976",
+    "contact:email": "knapo.org@gmail.com",
+    "contact:phone": "+254 770 626 33",
+    "contact:address": "P.O. Box 6104-00100 GPO, Nairobi, Kenya",
+    "geo.region": "KE",
+    "geo.placename": "Nairobi",
+  },
 };
 
 export default function RootLayout({
@@ -86,32 +95,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <meta name="msapplication-TileColor" content="#008F39" />
-        <meta name="theme-color" content="#008F39" />
-        {/* Organization info */}
-        <meta
-          name="organization"
-          content="Kenya National Association of Probation Officers"
-        />
-        <meta name="founded" content="1976" />
-        <meta name="contact:email" content="knapo.org@gmail.com" />
-        <meta name="contact:phone" content="+254 770 626 33" />
-        <meta
-          name="contact:address"
-          content="P.O. Box 6104-00100 GPO, Nairobi, Kenya"
-        />
-        <meta name="geo.region" content="KE" />
-        <meta name="geo.placename" content="Nairobi" />
-      </head>
       <body suppressHydrationWarning>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="flex min-h-screen flex-col">
-              <Navbar />
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </div>
-          </ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="flex min-h-screen flex-col">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

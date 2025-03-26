@@ -91,7 +91,11 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-sm font-medium transition-all duration-300 
+              text-gray-700 dark:text-gray-300 
+              hover:text-[#008F39] hover:scale-105 
+              dark:hover:text-[#008F39] 
+              hover:font-semibold"
             >
               {item.name}
             </Link>
@@ -101,7 +105,11 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className="text-sm font-medium transition-all duration-300 
+                text-gray-700 dark:text-gray-300 
+                hover:text-[#008F39] hover:scale-105 
+                dark:hover:text-[#008F39] 
+                hover:font-semibold"
               >
                 {item.name}
               </Link>
@@ -162,7 +170,11 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-lg font-medium transition-colors hover:text-primary"
+                  className="text-lg font-medium transition-all duration-300 
+                  text-gray-700 dark:text-gray-300 
+                  hover:text-[#008F39] hover:scale-105 
+                  dark:hover:text-[#008F39] 
+                  hover:font-semibold"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -173,7 +185,11 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-lg font-medium transition-colors hover:text-primary"
+                    className="text-lg font-medium transition-all duration-300 
+                    text-gray-700 dark:text-gray-300 
+                    hover:text-[#008F39] hover:scale-105 
+                    dark:hover:text-[#008F39] 
+                    hover:font-semibold"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
