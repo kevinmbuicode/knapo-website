@@ -86,15 +86,24 @@ export default function Navbar() {
         </Link>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex md:gap-5 lg:gap-8">
+        <nav className="hidden md:flex md:gap-2 lg:gap-4">
           {publicNavItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium transition-colors 
-              text-[#008F39] 
-              dark:text-gray-300 
-              hover:opacity-80"
+              className="inline-flex items-center justify-center 
+              rounded-md 
+              bg-[#008F39] 
+              text-white 
+              px-3 py-2 
+              text-sm 
+              font-medium 
+              transition-colors 
+              hover:bg-[#007030] 
+              focus:outline-none 
+              focus:ring-2 
+              focus:ring-[#008F39] 
+              focus:ring-offset-2"
             >
               {item.name}
             </Link>
@@ -104,10 +113,19 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium transition-colors 
-                text-[#008F39] 
-                dark:text-gray-300 
-                hover:opacity-80"
+                className="inline-flex items-center justify-center 
+                rounded-md 
+                bg-[#008F39] 
+                text-white 
+                px-3 py-2 
+                text-sm 
+                font-medium 
+                transition-colors 
+                hover:bg-[#007030] 
+                focus:outline-none 
+                focus:ring-2 
+                focus:ring-[#008F39] 
+                focus:ring-offset-2"
               >
                 {item.name}
               </Link>
@@ -168,10 +186,20 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-lg font-medium transition-colors 
-                  text-[#008F39] 
-                  dark:text-gray-300 
-                  hover:opacity-80"
+                  className="inline-flex items-center justify-center 
+                  rounded-md 
+                  bg-[#008F39] 
+                  text-white 
+                  px-4 py-3 
+                  text-lg 
+                  font-medium 
+                  transition-colors 
+                  hover:bg-[#007030] 
+                  focus:outline-none 
+                  focus:ring-2 
+                  focus:ring-[#008F39] 
+                  focus:ring-offset-2 
+                  w-full"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -182,10 +210,20 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-lg font-medium transition-colors 
-                    text-[#008F39] 
-                    dark:text-gray-300 
-                    hover:opacity-80"
+                    className="inline-flex items-center justify-center 
+                    rounded-md 
+                    bg-[#008F39] 
+                    text-white 
+                    px-4 py-3 
+                    text-lg 
+                    font-medium 
+                    transition-colors 
+                    hover:bg-[#007030] 
+                    focus:outline-none 
+                    focus:ring-2 
+                    focus:ring-[#008F39] 
+                    focus:ring-offset-2 
+                    w-full"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
