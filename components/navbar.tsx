@@ -88,7 +88,7 @@ export default function Navbar() {
               key={item.name}
               href={item.href}
               className="text-sm font-medium transition-colors 
-              text-[#008F39] 
+              text-[#00A3E0] 
               dark:text-gray-300 
               hover:opacity-80"
             >
@@ -101,7 +101,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 className="text-sm font-medium transition-colors 
-                text-[#008F39] 
+                text-[#00A3E0] 
                 dark:text-gray-300 
                 hover:opacity-80"
               >
@@ -165,7 +165,7 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   className="text-lg font-medium transition-colors 
-                  text-[#008F39] 
+                  text-[#00A3E0] 
                   dark:text-gray-300 
                   hover:opacity-80"
                   onClick={() => setIsOpen(false)}
