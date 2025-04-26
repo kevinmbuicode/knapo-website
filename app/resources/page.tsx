@@ -24,8 +24,8 @@ export default function ResourcesPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Card>
               <CardHeader>
-                <CardTitle>Corprate Membership Forms</CardTitle>
-                <CardDescription>Application forms for coprate membership types</CardDescription>
+                <CardTitle>Corporate Membership Forms</CardTitle>
+                <CardDescription>Application forms for corporate membership types</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex h-24 items-center justify-center">
