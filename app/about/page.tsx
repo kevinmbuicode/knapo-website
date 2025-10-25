@@ -92,26 +92,32 @@ export default function AboutPage() {
                   <h3 className="font-semibold text-lg md:text-xl mb-3">Executive Board Members</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div className="p-3 bg-muted/40 rounded-lg">
+                    <img src="/images/NationalChairman.jpg" alt="Wycliffe Wathome" className="w-full h-48 object-cover rounded mb-2"/>
                       <div className="font-medium">National Chairman</div>
                       <div className="text-primary">Wycliffe Wathome</div>
                     </div>
                     <div className="p-3 bg-muted/40 rounded-lg">
+                    <img src="/images/ViceNationalChairman.jpg" alt="Veronica Irungu" className="w-full h-48 object-cover rounded mb-2"/>
                       <div className="font-medium">Vice National Chairman</div>
                       <div className="text-primary">Veronica Irungu</div>
                     </div>
                     <div className="p-3 bg-muted/40 rounded-lg">
+                    <img src="/images/NationalSecretary.jpg" alt="Daniel Ng'etich" className="w-full h-48 object-cover rounded mb-2"/>
                       <div className="font-medium">National Secretary</div>
                       <div className="text-primary">Daniel Ng'etich</div>
                     </div>
                     <div className="p-3 bg-muted/40 rounded-lg">
+                    <img src="/images/ViceNationalSecretary.jpg" alt="Stephen Muthoka" className="w-full h-48 object-cover rounded mb-2"/>
                       <div className="font-medium">Vice National Secretary</div>
                       <div className="text-primary">Stephen Muthoka</div>
                     </div>
                     <div className="p-3 bg-muted/40 rounded-lg">
+                    <img src="/images/NationalTreasurer.jpg" alt="Edward Ochieng" className="w-full h-48 object-cover rounded mb-2"/>
                       <div className="font-medium">National Treasurer</div>
                       <div className="text-primary">Edward Ochieng</div>
                     </div>
                     <div className="p-3 bg-muted/40 rounded-lg">
+                    <img src="/images/ViceNationalTreasurer.jpg" alt="John Soxwel Mokoro" className="w-full h-48 object-cover rounded mb-2"/>
                       <div className="font-medium">Vice National Treasurer</div>
                       <div className="text-primary">John Soxwel Mokoro</div>
                     </div>
