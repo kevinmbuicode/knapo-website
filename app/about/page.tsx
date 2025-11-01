@@ -93,12 +93,12 @@ export default function AboutPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div className="p-3 bg-muted/40 rounded-lg">
                     <img src="/images/NationalChairman2.jpg" alt="Wycliffe Wathome" className="w-full h-48 object-cover rounded mb-2"/>
-                      <div className="font-medium">National Chairman</div>
+                      <div className="font-medium">National Chairperson</div>
                       <div className="text-primary">Wycliffe Wathome</div>
                     </div>
                     <div className="p-3 bg-muted/40 rounded-lg">
                     <img src="/images/ViceNationalChairman.jpg" alt="Veronica Irungu" className="w-full h-48 object-cover rounded mb-2"/>
-                      <div className="font-medium">Vice National Chairman</div>
+                      <div className="font-medium">Vice National Chairperson</div>
                       <div className="text-primary">Veronica Irungu</div>
                     </div>
                     <div className="p-3 bg-muted/40 rounded-lg">
